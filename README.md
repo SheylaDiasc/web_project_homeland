@@ -12,6 +12,6 @@ Normalize.css: Normalização de estilos entre navegadores para garantir uma exi
 Git: Controle de versão, facilitando a colaboração e o monitoramento das alterações no código.
 VS Code: Ambiente de desenvolvimento integrado para a codificação do projeto.
 
-Segue o link do projeto.
+Segue o link do projeto. https://sheyladiasc.github.io/web_project_homeland/
 
 Espero que você goste e agradeço imensamente pela sua atenção.
