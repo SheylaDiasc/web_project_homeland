@@ -1,8 +1,35 @@
+.lead__content {
+  display: grid;
+  grid-template-columns: auto 40px auto;
+  grid-template-rows: auto 48px auto 48px auto;
+  grid-template-areas: "title . artist" ". . ." "image . paragraph" ". . paragraph" "nft-link nft-link paragraph" ". . paragraph";
+}
+
 .lead__title {
   grid-area: title;
   max-width: 460px;
   font-size: 72px;
   line-height: 1.055;
+  margin: 0;
+}
+
+.lead__container-artist {
+  grid-area: artist;
+  margin: auto 0 0;
+}
+
+.lead__url-heading {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.21;
+  letter-spacing: 1.44px;
+  color: #aaaaaa;
+  margin: 0 0 8px;
+}
+
+.lead__artist {
+  font-size: 18px;
+  line-height: 1.22;
   margin: 0;
 }
 
@@ -27,7 +54,40 @@
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
 }
 
+.lead__image {
+  opacity: 0.5;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 1);
+}
+
+.lead__nft-link {
+  grid-area: nft-link;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 13px 20px;
+  width: fit-content;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #0278fe 0%, #003a7b 99.98%);
+  color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  line-height: 1.2305;
+}
+
+.lead__nft-link {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 120, 254, 0.25) 0%,
+    rgba(0, 58, 123, 0.25) 99.98%
+  );
+}
+
 @media screen and (max-width: 1024px) {
+  .lead__content {
+    grid-template-columns: 1fr 28px auto;
+    grid-template-rows: auto 48px auto 48px auto;
+  }
+
   .lead__image {
     width: 44.272vw;
   }
@@ -41,11 +101,28 @@
   .lead__paragraph {
     font-size: 16px;
   }
+
+  .lead__nft-link {
+    margin-right: 13px;
+  }
 }
 
 @media screen and (max-width: 544px) {
+  .lead__content {
+    place-items: center;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title" "artist" "image" "paragraph" "nft-link";
+  }
+
   .lead__title {
     font-size: 32px;
+    width: 90vw;
+    margin: 0;
+  }
+
+  .lead__container-artist {
     width: 90vw;
     margin: 0;
   }
@@ -57,6 +134,22 @@
   .lead__image {
     width: 100%;
     margin-right: 0;
+    box-shadow: none;
+  }
+
+  .lead__nft-link {
+    font-size: 14px;
+    grid-area: nft-link;
+    margin: 0;
+    padding: 15px 21px;
+  }
+
+  .lead__nft-link {
+    background: linear-gradient(90deg, #0278fe 0%, #003a7b 99.98%);
+  }
+
+  .lead__image {
+    opacity: 1;
     box-shadow: none;
   }
 }

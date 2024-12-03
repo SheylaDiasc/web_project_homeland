@@ -1,0 +1,23 @@
+.leads__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 80px;
+  max-width: 984px;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .leads__list {
+    max-width: 93.75vw;
+    row-gap: 72px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .leads__list {
+    max-width: 100%;
+    gap: 50px;
+  }
+}
